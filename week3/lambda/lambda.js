@@ -1,5 +1,43 @@
 
+const id = x => x;
 
+
+const fst = x => y => x;
+const snd = x => y => y;
+const konst = fst;
+
+const M = f => f(f);
+
+//const T = first => second => first; // church encoding
+// const F = first => second => second;
+const T = fst;
+const F = snd;
+
+
+// const and = first => second => first ( second (T) (F) ) ( second (F) (T));
+const and = first => second => first ( second ) ( first );
+
+// const or = first => second => first ( first (T)(T)) ( second (T)(F));
+// const or = first => second => first ( first ) ( second );
+// ETA Reduktion ->
+// const or = first => first ( first ) ;
+// Mocking Bird
+//const or = first => M(first);
+const or = M;
+
+
+const Pair = first => second =>  f => f (first) (second);
+const firstname = fst;
+const lastname = snd;
+
+
+const Left = message => f => g => f(message);
+const Right = result => f => g => g(result);
+//const either = e  => f => g => e (f) (g);
+// ETA Reduktion
+//const either = e  => f => e (f);
+//const either = e  =>  e ;
+const either = id;
 
 // ----- special -----
 
