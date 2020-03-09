@@ -38,6 +38,12 @@ const Right = result => f => g => g(result);
 //const either = e  => f => e (f);
 //const either = e  =>  e ;
 const either = id;
+const and = first => second => first ( second ) ( first );
+const or  = M ;
+
+const Pair = first => second => selector  => selector (first) (second);
+const firstname = fst;
+const lastname  = snd;
 
 // ----- special -----
 
