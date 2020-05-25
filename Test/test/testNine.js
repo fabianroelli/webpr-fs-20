@@ -38,7 +38,7 @@ document.writeln([1,2,3,4,5,6].filter(divides(3)).toString() === "3,6");
 
 
 
-const join = x => y => x + y;
+const join = jo => (accu, cur) => accu + jo + cur;
 
 document.writeln("Join Result: ");
 document.writeln([1,2,3].reduce(join('-') ));

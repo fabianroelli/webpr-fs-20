@@ -1,17 +1,17 @@
-//  before start, snake is in start position
-    document.writeln(pairEq(snake[0]) (pair(10)(5)));
+//  before start, test is in start position
+    document.writeln(pairEq(test[0]) (pair(10)(5)));
 
-//  after one step, snake has moved up
+//  after one step, test has moved up
     nextBoard();
-    document.writeln(pairEq(snake[0]) (pair(10)(4)));
+    document.writeln(pairEq(test[0]) (pair(10)(4)));
 
-//  before eating food, snake is of size 4
-    document.writeln(snake.length === 4);
+//  before eating food, test is of size 4
+    document.writeln(test.length === 4);
 
-//  after eating food, snake has grown in size
+//  after eating food, test has grown in size
     food = pair(10)(3);
     nextBoard();
-    document.writeln(snake.length === 5);
+    document.writeln(test.length === 5);
 
 //  current direction is north
     document.writeln(direction === north);
